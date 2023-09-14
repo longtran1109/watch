@@ -1,0 +1,20 @@
+{
+  "name": "watches",
+  "version": "1.0.0",
+  "description": "watches data",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "server": "json-server --watch src/db.json"
+  },
+  "keywords": [],
+  "author": "Long Tran",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.3.2",
+    "json-server": "^0.17.0"
+  },
+  "engines": {
+    "node": "^16.0.0 || >=18.0.0"
+  }
+}
