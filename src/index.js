@@ -11,7 +11,7 @@ server.use(auth);
 server.use(
   cors({
     origin: ["http://localhost:5173"],
-    methods: ["POST", "GET", "OPTIONS"],
+    "Access-Control-Allow-Origin": "*",
   })
 );
 server.use(router);
