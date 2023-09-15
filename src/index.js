@@ -4,7 +4,6 @@ const router = jsonServer.router("server.json");
 const auth = require("json-server-auth");
 
 server.db = router.db;
-server.use(auth);
 
 server.use((req, res, next) => {
   const corsWhitelist = ["http://localhost:5173"];
@@ -21,9 +20,8 @@ server.use((req, res, next) => {
   next();
 });
 
+server.use(auth);
 server.use(router);
 
 const port = process.env.PORT || 3000;
-server.listen(port, () => {
-  console.log(`JSON Server is running on port ${port}`);
-});
+server.listen(port);
