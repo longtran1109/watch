@@ -3,10 +3,11 @@ const server = jsonServer.create();
 const router = jsonServer.router("server.json");
 const middlewares = jsonServer.defaults();
 const auth = require("json-server-auth");
+const cors = require("cors");
 
 server.db = router.db;
 server.use(auth);
-
+server.use(cors());
 server.use(router);
 
 const port = process.env.PORT || 3000;
