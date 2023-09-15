@@ -4,14 +4,14 @@
   "description": "watches data",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "server": "json-server --watch src/db.json"
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "Long Tran",
   "license": "ISC",
   "devDependencies": {
-    "json-server": "^0.17.0"
+    "json-server": "^0.17.3",
+    "json-server-auth": "^2.1.0"
   },
   "engines": {
     "node": "^16.0.0 || >=18.0.0"
