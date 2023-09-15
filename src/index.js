@@ -4,10 +4,12 @@ const router = jsonServer.router("server.json");
 const middlewares = jsonServer.defaults();
 const auth = require("json-server-auth");
 const cors = require("cors");
+const express = require("express");
 
+const app = express();
 server.db = router.db;
 server.use(auth);
-server.use(cors({ origin: ["http://localhost:5173"] }));
+app.use(cors({ origin: ["http://localhost:5173"] }));
 server.use(router);
 
 const port = process.env.PORT || 3000;
