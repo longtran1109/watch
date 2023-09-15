@@ -10,6 +10,15 @@ const app = express();
 server.db = router.db;
 server.use(auth);
 app.use(cors({ origin: ["http://localhost:5173"] }));
+const corsOpts = {
+  origin: "*",
+
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+
+  allowedHeaders: ["Content-Type"],
+};
+
+app.use(cors(corsOpts));
 server.use(router);
 
 const port = process.env.PORT || 3000;
