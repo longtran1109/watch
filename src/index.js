@@ -7,7 +7,7 @@ const cors = require("cors");
 
 server.db = router.db;
 server.use(auth);
-server.use(cors());
+server.use(cors({ origin: ["http://localhost:5173"] }));
 server.use(router);
 
 const port = process.env.PORT || 3000;
